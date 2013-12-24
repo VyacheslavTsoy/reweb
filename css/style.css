@@ -482,13 +482,55 @@ header h1 a {
 
 
 /*=====================> Portfolio Page ========================*/
-
 .portfolio_box{
-  padding: 0 0 0 20px;
+  padding: 0px 22px 0 20px;
 }
-  .portfolio_row{
 
+#single_page{
+  margin-top: -76px;
+  padding-top: 76px;
+  display: none;
+  width: 100%;
+}
+  .single_title{
+    font-size: 20px;
+    line-height: 24px;
+    color: #767676;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 12px;
   }
+
+  .single_portfolio{
+    background: #e1e1e1;
+    font-size: 14px;
+    line-height: 20px;
+    color: #767676;
+  }
+    .single_portfolio__content_title{
+      color: #5b524a;
+      margin-bottom: 8px;
+      text-decoration: underline;
+    }
+    .single_portfolio__content{
+      overflow: hidden;
+      padding: 16px 22px;
+    }
+      .single_portfolio__content p{
+        margin-bottom: 20px;
+      }
+      
+      .single_portfolio__content a{
+        text-decoration: underline;
+        color: #fe0000;
+      }
+        .single_portfolio__content a:hover{
+          text-decoration: none;
+        }
+
+.portfolio_row{
+
+}
 
     .portfolio_item{
       display: block;
@@ -746,7 +788,9 @@ a:hover{
 }
 
 .main_offer_col_inner,
-.main_offer_col:after{
+.main_offer_col:after,
+.flex-direction-nav a:hover,
+.flex-direction-nav a{
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

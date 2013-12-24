@@ -16,8 +16,11 @@
 	 <script type="text/javascript">
 		  $(window).load(function() {
 				$('.flexslider').flexslider({
-				  animation: "slide"
-				});
+          animation: "slide"
+        });
+        $(".portfolio_item").click(function(){
+          $("#single_page").fadeIn(1000);
+        })
 			 });
 	 </script>
 	<!--[if lt IE 8]>
@@ -201,35 +204,49 @@
           <h2 class="title5">Портфолио</h2>
           <div class="clear"></div>
         </div>
-        
-        <article id="single_portfolio">
-          
-        </article>
 
         <article class="portfolio_box">
+          <div id="single_page" class="portfolio_single_box">
+            <h2 class="single_title">T+T Architects Newsstand</h2>
+            <div class="wrapper single_portfolio">
+              <figure class="single_portfolio__img flexslider">
+                <ul class="slides">
+                  <li><img src="images/portfolio.jpg" alt=""></li>
+                  <li><img src="images/portfolio.jpg" alt=""></li>
+                </ul>
+              </figure>
+              <div class="single_portfolio__content">
+                <h3 class="single_portfolio__content_title">iPad / Newsstand / Appstore</h3>
+                <p>Серия журналов для app store Newsstand позволяет компании Т+Т регулярно обновлять портфель проектов и расскзывать о своих успехах своим друзьям и более широкой аудитории.</p>
+
+                T+T архитектурная компания из России, для которой мы сделали, помимо представленной работы, весь комплекс работ по брендингу. <br>
+                <a href="#">cсылка</a>
+              </div>
+            </div>
+          </div>
           <div class="wrapper portfolio_row">
-            <a href="" class="portfolio_item">
+            <a href="#single_page" class="portfolio_item">
               <img src="images/portfolio_img1.jpg" alt="">
               <span class="portfolio_item__description">
                 <span class="portfolio_item__title">WTS</span>
                 HTML5/CSS, Separate URL
               </span>
             </a>
-            <a href="" class="portfolio_item">
+            <a href="#single_page" class="portfolio_item">
               <img src="images/portfolio_img2.jpg" alt="">
               <span class="portfolio_item__description">
                 <span class="portfolio_item__title">WTS</span>
                 HTML5/CSS, Separate URL
               </span>
             </a>
-            <a href="" class="portfolio_item">
+            <a href="#single_page" class="portfolio_item">
               <img src="images/portfolio_img3.jpg" alt="">
               <span class="portfolio_item__description">
                 <span class="portfolio_item__title">WTS</span>
                 HTML5/CSS, Separate URL
               </span>
             </a>
-            <a href="" class="portfolio_item">
+            <a href="#single_page" class="portfolio_item">
               <img src="images/portfolio_img4.jpg" alt="">
               <span class="portfolio_item__description">
                 <span class="portfolio_item__title">WTS</span>
@@ -238,28 +255,28 @@
             </a>
           </div>
           <div class="wrapper portfolio_row">
-            <a href="" class="portfolio_item">
+            <a href="#single_page" class="portfolio_item">
               <img src="images/portfolio_img5.jpg" alt="">
               <span class="portfolio_item__description">
                 <span class="portfolio_item__title">WTS</span>
                 HTML5/CSS, Separate URL
               </span>
             </a>
-            <a href="" class="portfolio_item">
+            <a href="#single_page" class="portfolio_item">
               <img src="images/portfolio_img6.jpg" alt="">
               <span class="portfolio_item__description">
                 <span class="portfolio_item__title">WTS</span>
                 HTML5/CSS, Separate URL
               </span>
             </a>
-            <a href="" class="portfolio_item">
+            <a href="#single_page" class="portfolio_item">
               <img src="images/portfolio_img7.jpg" alt="">
               <span class="portfolio_item__description">
                 <span class="portfolio_item__title">WTS</span>
                 HTML5/CSS, Separate URL
               </span>
             </a>
-            <a href="" class="portfolio_item">
+            <a href="#single_page" class="portfolio_item">
               <img src="images/portfolio_img8.jpg" alt="">
               <span class="portfolio_item__description">
                 <span class="portfolio_item__title">WTS</span>
