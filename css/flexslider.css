@@ -1,15 +1,23 @@
 /* FlexSlider Default Theme
 *********************************/
-.flexslider {margin: 0 0 0px; position: relative;width: 705px;float: left;}
+.flexslider{margin: 0 0 0px; position: relative;width: 705px;float: left;}
+.flexslider1{margin: 0 0 0px; position: relative;width: 100%;}
 .flex-viewport {}
 .loading .flex-viewport {max-height: 300px;}
 .flexslider .slides {zoom: 1;}
 
 /* Direction Nav */
-.flex-direction-nav a{width: 22px; height: 35px; margin: -18px 0 0; display: block;  position: absolute; top: 50%; cursor: pointer; text-indent: -9999px;}
+.flexslider .flex-direction-nav a{width: 22px; height: 35px; margin: -18px 0 0; display: block;  position: absolute; top: 50%; cursor: pointer; text-indent: -9999px;}
 .flexslider .flex-next {right: 30px;background: url("../images/slider_next.png") no-repeat;}
 .flexslider .flex-prev {left: 30px;background: url("../images/slider_prev.png") no-repeat;}
-.flex-direction-nav a:hover{
+.flexslider .flex-direction-nav a:hover{
+	background-position: 0 -35px;
+}
+
+.flexslider1 .flex-direction-nav a{width: 26px; height: 35px; margin: -11px 0 0; display: block;  position: absolute; top: 50%; cursor: pointer; text-indent: -9999px;}
+.flexslider1 .flex-next {right: -64px;background: url("../images/next_arrow1.png") no-repeat;}
+.flexslider1 .flex-prev {left: -66px;background: url("../images/prev_arrow1.png") no-repeat;}
+.flexslider1 .flex-direction-nav a:hover{
 	background-position: 0 -35px;
 }
 
