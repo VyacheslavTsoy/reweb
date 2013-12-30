@@ -974,11 +974,18 @@ h2,h3,h4{
     .step-3 .segment4,
     .step-4 .segment5,
     .step-5 .segment6,
+    .step-6 .segment7,
+    .step-7 .segment8,
+    .step-8 .segment9,
     #timing_stripe_inner,
     .step-0 .days_list .day1,
     .step-1 .days_list .day2,
     .step-2 .days_list .day3,
-    .step-3 .days_list .day4{
+    .step-3 .days_list .day4,
+    .step-4 .days_list .day5,
+    .step-5 .days_list .day6,
+    .step-6 .days_list .day7,
+    .step-7 .days_list .day8{
       -moz-transform: translateX(0px);
       -webkit-transform: translateX(0px);
       -o-transform: translateX(0px);
@@ -992,9 +999,15 @@ h2,h3,h4{
       left: -29px;
       top: -47px;
       background: #6dcff6;
-      padding: 8px 18px 7px;
+      padding: 8px 0px 7px;
+      width: 177px;
+      text-align: center;
       z-index: 2;
+      letter-spacing: 0;
     }
+      .step_label1.var1{
+        left: 637px;
+      }
       .step_label1:before{
         display: block;
         position: absolute;
@@ -1042,10 +1055,6 @@ h2,h3,h4{
         content: "";
       }
 
-    .step_label2.var1{
-      left: 337px;
-    }
-
     .step_label3{
       background: #fff;
       position: absolute;
@@ -1065,9 +1074,41 @@ h2,h3,h4{
         content: "";
       }
 
-    .step_label3.var2{
+    .finish_label{
+      position: absolute;
+      right: -36px;
+      bottom: 94px;
+      width: 79px;
+      padding: 6px 10px 6px 0;
+      text-align: center;
+      background: url("../images/finish_label.png") no-repeat;
+    }
+      .finish_label:before{
+        width: 5px;
+        height: 86px;
+        display: block;
+        position: absolute;
+        left: -5px;
+        top: 0;
+        background: #0078a5;
+        content: "";
+      }
+    
+    .segment4{
+      left: 337px;
+    }
+    .segment5{
       left: 412px;
     }
+    .segment6{
+      left: 561px;
+    }
+    .segment8{
+      left: 744px;
+    }
+      .segment6:before{
+        background: url("../images/mobile_icon1.png") no-repeat;
+      }
   .days_list{
     overflow: hidden;
     padding: 27px 15px 0;
