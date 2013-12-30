@@ -283,29 +283,29 @@
         <div class="timing_stripe_box object object1 delay2">
           <div class="timing_stripe">
 
-            <div class="step_label1">
+            <div class="step_label1 segment1">
               Техническое задание
             </div>
 
-            <div class="step_label2">
+            <div class="step_label2 segment2">
               дизайн<br>
               главной<br> 
               страницы
               <div class="bot_stripe"></div>
             </div>
 
-            <div class="step_label2 var1">
+            <div class="step_label2 var1 segment4">
               дизайн<br>
               внутренних<br>
               страниц
               <div class="bot_stripe"></div>
             </div>
 
-            <div class="step_label3">
+            <div class="step_label3 segment3">
               Утверждение
             </div>
 
-            <div class="step_label3 var2">
+            <div class="step_label3 var2 segment5">
               Утверждение
             </div>
 
@@ -314,10 +314,10 @@
             </div>
 
             <ul class="days_list">
-              <li>1 день</li>
-              <li>3 дня</li>
-              <li>2 дня</li>
-              <li>5 дней</li>
+              <li class="day1">1 день</li>
+              <li class="day2">3 дня</li>
+              <li class="day3">2 дня</li>
+              <li class="day4">5 дней</li>
             </ul>
           </div>
         </div>
@@ -351,8 +351,25 @@
           <div class="f_left calculate_col1 object object2 delay1">
             <form class="calculate_form">
               <label>посещений / месяц</label>
-              <input type="text" value="25 000">
-              <a href="#" class="rob link1">Расширенные настройки</a>
+              <input class="calculate_txt_field" type="text" value="25 000">
+              <ul id="add_settings">
+                <li class="add_set_item">
+                  <div class="add_set_label">ctr <input type="text" id="amount1"></div>
+                  <div id="slider_ctr"></div>
+                </li>
+                <li class="add_set_item">
+                  <div class="add_set_label">Мобильная аудитория <input type="text" id="amount2"></div>
+                  <div id="mobile_auditor"></div>
+                </li>
+                <li class="add_set_item">
+                  <div class="add_set_label">Средняя стоимость покупки <input type="text" id="amount3"></div>
+                  <div id="slider_average"></div>
+                </li>
+              </ul>
+              <div id="settings_links">
+                <a href="#" class="rob link1" id="show_settings">Расширенные настройки</a>
+                <a href="#" class="rob link1" id="hide_settings">Свернуть</a>
+              </div>
               <a href="#" class="recalculate_btn">Пересчитать</a>
             </form>
           </div>
@@ -511,6 +528,7 @@
    <script src="js/waypoints.min.js"></script>
    <script src="js/jquery.mousewheel.js"></script>
    <script src="js/timing.js"></script>
+   <script src="js/jquery-ui-1.10.3.custom.js"></script>
    <script>
       $(window).load(function() {
         $('#timing').addClass('step-0');
@@ -563,6 +581,41 @@
         $(section6).waypointInit('show','30%');
         $(section7).waypointInit('show','100%');
         $('.main_offers').waypointInit('show','50%');
+
+        $( "#slider_ctr" ).slider({
+          range: "min",
+          value: 20,
+          min: 1,
+          max: 100,
+          slide: function( event, ui ) {
+            $( "#amount1" ).val(ui.value + "%" );
+          }
+        });
+        $( "#amount1" ).val($( "#slider_ctr" ).slider( "value" ) + "%");
+
+        $("#mobile_auditor").slider({
+          range: "min",
+          value: 20,
+          min: 1,
+          max: 100,
+          slide: function( event, ui ) {
+            $( "#amount2" ).val(ui.value + "%");
+          }
+        });
+        $( "#amount2" ).val($( "#mobile_auditor").slider("value") + "%");
+
+        $("#slider_average").slider({
+          range: "min",
+          value: 50,
+          min: 1,
+          max: 100,
+          slide: function( event, ui ) {
+            $( "#amount3" ).val(ui.value + " EUR");
+          }
+        });
+        $("#amount3").val($( "#slider_average").slider("value") + " EUR");
+
+        
       })
    </script>
 </body>

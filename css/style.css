@@ -938,7 +938,7 @@ h2,h3,h4{
     letter-spacing: -1px;
   }
     .timing_stripe{
-      height: 38px;
+      height: 40px;
       position: relative;
       background: url("../images/timing_stripe.png") no-repeat;
     }
@@ -948,8 +948,43 @@ h2,h3,h4{
       left: 0;
       top: 0;
       height: 100%;
-      width: 10%;
-      background: red;
+      width: 0;
+      background: url("../images/timing_stripe_inner.png") 0 0px no-repeat;
+      transition:none !important;
+    }
+    
+    .timing_stripe>div,
+    .days_list>li{
+      opacity: 0;
+      -moz-transform: translateX(-20px);
+      -webkit-transform: translateX(-20px);
+      -o-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+      transform: translateX(-20px);
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -ms-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+    }
+    
+    .step-0 .segment1,
+    .step-1 .segment2,
+    .step-2 .segment3,
+    .step-3 .segment4,
+    .step-4 .segment5,
+    .step-5 .segment6,
+    #timing_stripe_inner,
+    .step-0 .days_list .day1,
+    .step-1 .days_list .day2,
+    .step-2 .days_list .day3,
+    .step-3 .days_list .day4{
+      -moz-transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+      transform: translateX(0px);
+      opacity: 1;
     }
 
     .step_label1{
@@ -1079,8 +1114,8 @@ h2,h3,h4{
     margin-bottom: 11px;
     letter-spacing: -1px;
   }
-  .calculate_form input[type="text"]{
-    border: 1px solid #58595b;
+  .calculate_form .calculate_txt_field{
+    border: 1px solid #d9d9d9;
     background: none;
     margin: 0 0 13px;
     padding: 9px 24px 4px;
@@ -1133,6 +1168,75 @@ h2,h3,h4{
 
     }
 
+#add_settings{
+  padding-bottom: 15px;
+}
+.ui-slider{
+  background: #f8f8f8;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  position: relative;
+}
+  .ui-slider-handle{
+    width: 34px;
+    height: 28px;
+    margin-left: -17px;
+    display: block;
+    top: -5px;
+    -webkit-transition:none !important;
+    transition:none !important;
+    position: absolute;
+    background: url("../images/slider_handle.png") no-repeat;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  .ui-slider-range{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #f9a32a;
+  }
+
+  .add_set_label,
+  #add_settings input[type="text"]{
+    font-size: 16px;
+    line-height: 21px;
+    color: #58595b;
+    text-transform: uppercase;    
+  }
+  
+  .add_set_label{
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  
+  #add_settings input[type="text"]{
+    margin: 0 0 0 0px;
+    padding: 0;
+    background: none;
+    border: none;
+    display: inline-block;
+    width: 60px;
+    color: #f9a32a;
+  }
+  .add_set_item{
+    margin-top: 15px;
+  }
+
+  #add_settings .add_set_item:first-child{
+    margin-top: 0;
+  }
+
+  #settings_links a{
+    display: none;
+  }
+
+  #settings_links #show_settings{
+    display: block;
+  }
 
 .calculate_list{
   letter-spacing: -1px;
@@ -1172,6 +1276,7 @@ h2,h3,h4{
   line-height: 24px;
   letter-spacing: -1px;
   padding-right: 25px;
+  font-weight: bold;
 }
 
 .white_box_bottom{
